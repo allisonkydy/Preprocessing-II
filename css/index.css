@@ -335,6 +335,9 @@ header .nav-bar nav a {
   text-align: center;
   cursor: pointer;
 }
+.home .content-pick .destination .btn:hover {
+  background-color: #00b3b3;
+}
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
     background-color: #17A2B8;
@@ -345,6 +348,9 @@ header .nav-bar nav a {
     padding: 1.3rem 4.2rem;
     text-align: center;
     cursor: pointer;
+  }
+  .home .content-pick .destination .btn:hover {
+    background-color: #1fc8e3;
   }
 }
 .home .form-section {
@@ -394,4 +400,8 @@ header .nav-bar nav a {
   color: #FFFFFF;
   font-size: 1.8rem;
   cursor: pointer;
+}
+.home .form-section .form input[type=submit]:hover {
+  background: #FFFFFF;
+  color: #C0C0C0;
 }
