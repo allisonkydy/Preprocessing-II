@@ -4,17 +4,43 @@ header {
     margin-top: 2.2rem;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+        padding: unset;
+        padding-top: 2rem;
+        margin: unset;
+    }
+
     .nav-bar {
-        width: 800px;
+        max-width: 800px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media @mobile {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+
+            @media @mobile {
+                font-size: 3rem;
+                padding: 0 30% 1.4rem;
+            }
+        }
 
         nav {
             width: 36%;
             margin-right: 2.4rem;
             display: flex;
             justify-content: space-between;
+
+            @media @mobile {
+                width: 80%;
+                margin: unset;
+            }
 
             a {
                 text-decoration: none;
