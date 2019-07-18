@@ -204,7 +204,8 @@ header .nav-bar {
 @media (max-width: 500px) {
   header .nav-bar h1 {
     font-size: 3rem;
-    padding: 0 20% 1.4rem;
+    padding-bottom: 1.4rem;
+    margin: 0 30%;
   }
 }
 header .nav-bar nav {
