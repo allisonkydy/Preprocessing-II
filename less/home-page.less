@@ -84,6 +84,7 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
@@ -108,6 +109,43 @@
 
           .button-style(@button-bg, 100%);
         }
+      }
+    }
+  }
+
+  .form-section {
+    width: 75%;
+    margin: 3rem auto;
+
+    .form {
+      background: @navigation-border;
+      padding: 2rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      color: @font-color;
+      text-align: center;
+
+      select, input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1.8rem;
+        border: 0;
+        border-radius: 0.3rem;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      input[type=submit] {
+        padding: 1rem 4rem;
+        background: @navigation-border;
+        border: 2px solid @main-bg;
+        border-radius: 15px;
+        color: @main-bg;
+        font-size: 1.8rem;
+        cursor: pointer;
       }
     }
   }
