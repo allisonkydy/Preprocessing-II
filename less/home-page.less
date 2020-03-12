@@ -1,24 +1,45 @@
 .home {
 
+  .header-section {
+
+    .text-header {
+      padding-top: 1.9rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px dashed @navigation-border;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        padding: unset;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+        padding: unset;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -26,6 +47,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-flow: column-reverse wrap;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +68,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -50,12 +80,82 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+
+    @media @mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
+
+      .btn {
+    
+        .button-style(teal, 82.5%);
+
+        @media @mobile {
+
+          .button-style(@button-bg, 100%);
+        }
+      }
+    }
+  }
+
+  .form-section {
+    width: 75%;
+    margin: 3rem auto;
+
+    @media @mobile {
+      width: 100%;
+    }
+
+    .form {
+      background: @navigation-border;
+      padding: 2rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      color: @font-color;
+      text-align: center;
+
+      select, input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1.8rem;
+        border: 0;
+        border-radius: 0.3rem;
+
+        @media @mobile {
+          padding: 1.5rem 0 1.5rem 1rem;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      input[type=submit] {
+        padding: 1rem 4rem;
+        background: @navigation-border;
+        border: 2px solid @main-bg;
+        border-radius: 15px;
+        color: @main-bg;
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        &:hover {
+          background: @main-bg;
+          color: @navigation-border;
+        }
+      }
     }
   }
 }// home
